@@ -1050,6 +1050,7 @@ header .mega-ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 
@@ -1065,7 +1066,23 @@ header .mega-ul {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    position: absolute;
+    
 }
+
+.skills .container  .card:nth-child(1) .text span,
+.skills .container  .card:nth-child(4) .text span {
+    left: calc( 80% - 16px );
+}
+
+.skills .container .card:nth-child(2) .text span {
+    left:calc( 85% - 16px );
+}
+
+.skills .container .card:nth-child(3) .text span {
+    left:calc( 70% - 16px );
+}
+
 
 .skills .container .bars {
     width: 100%;
@@ -1082,16 +1099,16 @@ header .mega-ul {
     background-color: var(--main-color);
 }
 
-.skills .container .bar span:nth-child(1),
-.skills .container .bar span:nth-child(4) {
+.skills .container  .card:nth-child(1) .bar span,
+.skills .container  .card:nth-child(4) .bar span {
     width: 80%;
 }
 
-.skills .container .bar span:nth-child(2) {
+.skills .container .card:nth-child(2) .bar span {
     width: 85%;
 }
 
-.skills .container .bar span:nth-child(3) {
+.skills .container .card:nth-child(3) .bar span {
     width: 70%;
 }
 
@@ -1802,7 +1819,7 @@ footer .card:nth-child(3)>div {
 }
 
 @media (max-width:767px) {
-    .card:nth-child(3)>div {
+    footer .card:nth-child(3)>div {
         display: block !important;
     }
 }
